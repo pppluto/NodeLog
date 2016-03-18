@@ -1,0 +1,30 @@
+{
+  "name": "log",
+  "version": "1.0.0",
+  "description": "just for record",
+  "main": "httpUppercase.js",
+  "dependencies": {
+    "bl": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrPluto/NodeLog.git"
+  },
+  "keywords": [
+    "log"
+  ],
+  "author": "Pluto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrPluto/NodeLog/issues"
+  },
+  "homepage": "https://github.com/MrPluto/NodeLog#readme"
+}
