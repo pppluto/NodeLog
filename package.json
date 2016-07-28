@@ -4,7 +4,11 @@
   "description": "just for record",
   "main": "httpUppercase.js",
   "dependencies": {
-    "bl": "^1.1.2"
+    "bl": "^1.1.2",
+    "cheerio": "^0.20.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.7",
+    "mysql": "^2.11.1"
   },
   "devDependencies": {
     "eslint": "^2.4.0",
@@ -12,6 +16,7 @@
     "eslint-plugin-react": "^4.2.3"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
