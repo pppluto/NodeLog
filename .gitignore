@@ -3,3 +3,4 @@ node_modules
 *.log
 .nvm
 .eslintrc.json
+.DS_Store
