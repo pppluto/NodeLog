@@ -1,0 +1,18 @@
+{
+  "name": "haha",
+  "version": "1.0.1",
+  "description": "learning npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "author": "pluto",
+  "repository": "http://mrpluto.github.com",
+  "license": "ISC",
+  "dependencies": {
+    "@linclark/pkg": "^1.0.2"
+  }
+}

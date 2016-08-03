@@ -43,3 +43,9 @@ life.addListener('love',function(){
 })
 life.emit('love','你麻痹');
 life.emit('ha');
+
+life.once('haha',function(){
+  console.log('this is only call once');
+});
+life.emit('haha');
+life.emit('haha'); //nothing happen
