@@ -1,3 +1,8 @@
+/*
+This file is for learning stream module in node
+you can view these questions by npm -g install stream-adventure for more details
+ */
+
 var fs = require('fs');
 var http = require('http');
 var through = require('through2');
@@ -5,6 +10,8 @@ var split = require('split');
 var concat = require('concat-stream');
 var request = require('request');
 var ws = require('websocket-stream');
+var streamCombiner = require('stream-combiner');
+var zlib = require('zlib');
 // 1
 // fs.createReadStream(process.argv[2]).pipe(process.stdout);
 
@@ -84,24 +91,82 @@ var ws = require('websocket-stream');
 // }
 
 //11 duplexer redux
-var duplexer2 = require('duplexer2');
-var through = require('through2').obj;
+// var duplexer2 = require('duplexer2');
+// var through = require('through2').obj;
 
 // objectMode
 // A Readable stream in object mode will always return a single item from a call to stream.read(size),
 // regardless of what the size argument is.
 //
 // A Writable stream in object mode will always ignore the encoding argument to stream.write(data, encoding).
-module.exports = function(counter){
-  var counts = {};
-  var input = through(_write,_end);
-  function _write(input, encoding, done){
-    counts[input.country] = (counts[input.country] || 0) + 1;
-    done();
-  };
-  function _end(done){
-    counter.setCounts(counts);
-    done()
-  };
-  return duplexer2({objectMode:true},input,counter);
-}
+// module.exports = function(counter){
+//   var counts = {};
+//   var input = through(_write,_end);
+//   function _write(input, encoding, done){
+//     counts[input.country] = (counts[input.country] || 0) + 1;
+//     done();
+//   };
+//   function _end(done){
+//     counter.setCounts(counts);
+//     done()
+//   };
+//   return duplexer2({objectMode:true},input,counter);
+// }
+
+// 12 stream-combiner  **模拟一遍输出**
+// module.exports = function(){
+//   var current;
+//   var tr = through(_write,_end);
+//   function _write(line, _, next){
+//     console.log(line);
+//     if (line.length === 0) {
+//       return next();
+//     }
+//     var obj = JSON.parse(line);
+//     if (obj.type === 'genre') {
+//       if (current) {
+//         this.push(JSON.stringify(current) + '\n');
+//       }
+//       current = {name: obj.name,books:[]};
+//     } else if(obj.type === 'book') {
+//       current.books.push(obj.name);
+//     }
+//
+//     next();
+//   }
+//
+//   function _end(done){
+//     if (current) {
+//       this.push(JSON.stringify(current) + '\n');
+//     }
+//     done()
+//   }
+//   return streamCombiner(split(),tr,zlib.createGzip());
+// }
+
+//13 crypto
+// var crypto = require('crypto');
+// var stream = crypto.createDecipher('aes256','pluto');
+// process.stdin.pipe(stream).pipe(process.stdout);
+
+//14 secretz
+// encrypted, gzipper tar file will piped in on process.stdin.
+var crypto = require('crypto');
+var tr = require('through2');
+var decipher = crypto.createDecipher(process.argv[2],process.argv[3]);
+var tar = require('tar');
+var zlib = require('zlib')
+var parser = tar.Parse();
+parser.on('entry', function(entry){
+  //entry object type,path
+  if (entry.type === 'File') {
+    entry.pipe(crypto.createHash('md5',{encoding:'hex'}))
+      .pipe(concat(function(hash){
+        console.log(hash + ' ' + entry.path);
+      }));
+  }
+});
+process.stdin
+  .pipe(decipher)
+  .pipe(zlib.createGunzip())
+  .pipe(parser);
