@@ -14,27 +14,6 @@ life.on('love',function(para){
 life.on('love',function(para){
   console.log('love',para);
 });
-life.on('love',function(para){
-  console.log('love',para);
-});
-life.on('love',function(para){
-  console.log('love',para);
-});
-life.on('love',function(para){
-  console.log('love',para);
-});
-life.on('love',function(para){
-  console.log('love',para);
-});
-life.on('love',function(para){
-  console.log('love',para);
-});
-life.on('love',function(para){
-  console.log('love',para);
-});
-life.on('love',function(para){
-  console.log('love',para);
-});
 life.on('ha',function(f){
   console.log('ha',f);
 })
