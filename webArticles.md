@@ -12,7 +12,7 @@
 ### Browser
 
 - [render tree](http://www.cnblogs.com/RachelChen/p/5456182.html)
-- [浏览器团里](http://blog.csdn.net/dangnian/article/details/50876241)
+- [浏览器原理](http://blog.csdn.net/dangnian/article/details/50876241)
 - [Google web fundamentals](https://developers.google.cn/web/fundamentals/)
 
 ### JavaScript
@@ -50,3 +50,6 @@
 
 ### Yoo
 - [chrome56 支持人脸识别等api](https://wicg.github.io/shape-detection-api/#shape-detection-use-cases)
+
+### Workflow
+- [GitFlow](https://guides.github.com/introduction/flow/)
