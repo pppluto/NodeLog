@@ -1639,6 +1639,11 @@ stream-transform@^0.2.2:
   resolved "http://registry.npm.taobao.org/stream-transform/download/stream-transform-0.2.2.tgz#75867487f49528f8bf1d82499658753d02df7838"
   integrity sha1-dYZ0h/SVKPi/HYJJllh1PQLfeDg=
 
+strftime@^0.10.0:
+  version "0.10.0"
+  resolved "http://registry.npm.taobao.org/strftime/download/strftime-0.10.0.tgz#b3f0fa419295202a5a289f6d6be9f4909a617193"
+  integrity sha1-s/D6QZKVICpaKJ9ta+n0kJphcZM=
+
 string-to-stream@^1.1.0:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/string-to-stream/download/string-to-stream-1.1.1.tgz#aba78f73e70661b130ee3e1c0192be4fef6cb599"
