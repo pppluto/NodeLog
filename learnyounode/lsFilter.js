@@ -2,24 +2,30 @@ var fs = require('fs');
 var path = require('path');
 
 //过滤给定文件夹后缀符合条件的文件
-let dir = process.argv[2];
-let extension = process.argv[3];
+// let dir = process.argv[2];
+// let extension = process.argv[3];
 
-function lsFilter(dir) {
+function lsFilter(dir, extension, callback) {
   fs.readdir(dir, (err, list) => {
-    if (err) throw err;
-    if (!list || !list.length) return;
-    list.forEach(f => {
-      let { ext, name, base } = path.parse(f);
+    if (err) callback(err, []);
 
-      if (ext === '.' + extension) {
-        console.log(f);
-      }
+    if (!list || !list.length) callback(null, []);
+
+    let validList = list.filter(f => {
+      let ext = path.extname(f);
+      // let { ext, name, base } = path.parse(f);
+      return ext === '.' + extension;
+      // if (ext === '.' + extension) {
+      //   console.log(f);
+      // }
       //   else if (base === name && !base.startsWith('.')) {
       //     lsFilter(path.join(dir, f));
       //   }
     });
+    callback(err, validList);
   });
 }
 
-lsFilter(dir);
+// lsFilter(dir);
+
+module.exports = lsFilter;
