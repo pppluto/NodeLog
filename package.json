@@ -4,7 +4,7 @@
   "description": "just for record",
   "main": "httpUppercase.js",
   "dependencies": {
-    "bl": "^1.1.2",
+    "bl": "^3.0.0",
     "body-parser": "^1.15.2",
     "cheerio": "^0.20.0",
     "csv": "^1.1.0",
