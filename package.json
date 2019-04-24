@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/MrPluto/NodeLog/issues"
   },
-  "homepage": "https://github.com/MrPluto/NodeLog#readme"
+  "homepage": "https://github.com/MrPluto/NodeLog#readme",
+  "devDependencies": {
+    "stream-adventure": "^4.1.1"
+  }
 }

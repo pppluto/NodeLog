@@ -12,24 +12,24 @@ var request = require('request');
 var ws = require('websocket-stream');
 var streamCombiner = require('stream-combiner');
 var zlib = require('zlib');
-// 1
+// 1 读取文件
 // fs.createReadStream(process.argv[2]).pipe(process.stdout);
 
-// 2
+// 2 输入输出
 // process.stdin.pipe(process.stdout);
 
 // 3 输入转换大小
-// function write(buffer, encoding, next){
+// function write(buffer, encoding, next) {
 //   this.push(buffer.toString().toUpperCase());
 //   next();
 // }
-//
-// function end(done){
+
+// function end(done) {
 //   console.log('ddd');
 //   done();
 // }
-//
-// var tr = through(write,end);
+
+// var tr = through(write, end);
 // process.stdin.pipe(tr).pipe(process.stdout);
 
 //4 截断分行，按奇偶大小写
@@ -151,22 +151,22 @@ var zlib = require('zlib');
 
 //14 secretz
 // encrypted, gzipper tar file will piped in on process.stdin.
-var crypto = require('crypto');
-var tr = require('through2');
-var decipher = crypto.createDecipher(process.argv[2],process.argv[3]);
-var tar = require('tar');
-var zlib = require('zlib')
-var parser = tar.Parse();
-parser.on('entry', function(entry){
-  //entry object type,path
-  if (entry.type === 'File') {
-    entry.pipe(crypto.createHash('md5',{encoding:'hex'}))
-      .pipe(concat(function(hash){
-        console.log(hash + ' ' + entry.path);
-      }));
-  }
-});
-process.stdin
-  .pipe(decipher)
-  .pipe(zlib.createGunzip())
-  .pipe(parser);
+// var crypto = require('crypto');
+// var tr = require('through2');
+// var decipher = crypto.createDecipher(process.argv[2],process.argv[3]);
+// var tar = require('tar');
+// var zlib = require('zlib')
+// var parser = tar.Parse();
+// parser.on('entry', function(entry){
+//   //entry object type,path
+//   if (entry.type === 'File') {
+//     entry.pipe(crypto.createHash('md5',{encoding:'hex'}))
+//       .pipe(concat(function(hash){
+//         console.log(hash + ' ' + entry.path);
+//       }));
+//   }
+// });
+// process.stdin
+//   .pipe(decipher)
+//   .pipe(zlib.createGunzip())
+//   .pipe(parser);
