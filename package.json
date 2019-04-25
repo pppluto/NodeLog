@@ -5,15 +5,16 @@
   "main": "httpUppercase.js",
   "dependencies": {
     "bl": "^3.0.0",
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.18.3",
     "bytewiser": "^2.1.0",
     "cheerio": "^0.20.0",
     "csv": "^1.1.0",
-    "express": "^4.14.0",
+    "express": "^4.16.4",
     "learnyounode": "^3.5.10",
     "level": "^5.0.1",
     "mongoose": "^4.5.7",
     "mysql": "^2.11.1",
+    "pug": "^2.0.3",
     "strftime": "^0.10.0",
     "through2-map": "^3.0.0"
   },
@@ -35,6 +36,7 @@
   },
   "homepage": "https://github.com/MrPluto/NodeLog#readme",
   "devDependencies": {
+    "expressworks": "^3.4.3",
     "levelmeup": "^1.0.1",
     "stream-adventure": "^4.1.1"
   }
