@@ -441,23 +441,7 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   resolved "http://registry.npm.taobao.org/bn.js/download/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
   integrity sha1-LN4J617jQfSEdGuwMJsyU7GxRC8=
 
-body-parser@1.18.3, body-parser@^1.12.0:
-  version "1.18.3"
-  resolved "http://registry.npm.taobao.org/body-parser/download/body-parser-1.18.3.tgz#5b292198ffdd553b3a0f20ded0592b956955c8b4"
-  integrity sha1-WykhmP/dVTs6DyDe0FkrlWlVyLQ=
-  dependencies:
-    bytes "3.0.0"
-    content-type "~1.0.4"
-    debug "2.6.9"
-    depd "~1.1.2"
-    http-errors "~1.6.3"
-    iconv-lite "0.4.23"
-    on-finished "~2.3.0"
-    qs "6.5.2"
-    raw-body "2.3.3"
-    type-is "~1.6.16"
-
-body-parser@^1.18.3:
+body-parser@1.18.3, body-parser@^1.12.0, body-parser@^1.18.3:
   version "1.18.3"
   resolved "https://registry.npm.taobao.org/body-parser/download/body-parser-1.18.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbody-parser%2Fdownload%2Fbody-parser-1.18.3.tgz#5b292198ffdd553b3a0f20ded0592b956955c8b4"
   integrity sha1-WykhmP/dVTs6DyDe0FkrlWlVyLQ=
@@ -2729,9 +2713,9 @@ lodash.sample@^4.2.1:
   integrity sha1-XkKRsMdT+hq+sKq4+ynfG2bwf20=
 
 lodash@^4.1.0, lodash@^4.14.0, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.3.0:
-  version "4.17.11"
-  resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-  integrity sha1-s56mIp72B+zYniyN8SU2iRysm40=
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
 
 longest@^1.0.1:
   version "1.0.1"
