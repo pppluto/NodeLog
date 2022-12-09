@@ -9,7 +9,7 @@
     "bytewiser": "^2.1.0",
     "cheerio": "^0.20.0",
     "csv": "^1.1.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "learnyounode": "^3.5.10",
     "level": "^5.0.1",
     "mongoose": "^4.5.7",
